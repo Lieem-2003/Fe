@@ -9,7 +9,7 @@ export async function GET(req: Request) {
     const WEATHER_KEY = process.env.WEATHER_API_KEY!;
 
     // 1. WEATHER
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_KEY}&units=metric&lang=vi`;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=bb726f51cc737c802c3f2a46f360b420&units=metric&lang=vi`;
     const weatherRes = await fetch(weatherUrl);
     const weatherData = await weatherRes.json();
 
