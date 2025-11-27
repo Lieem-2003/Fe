@@ -11,7 +11,7 @@ export default function LocationController() {
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
 
-        await fetch("http://localhost:8080/api/location/save", {
+        await fetch("https://brevicaudate-marquerite-realisingly.ngrok-free.dev/api/location/save", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ lat, lon }),
