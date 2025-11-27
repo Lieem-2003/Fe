@@ -1,11 +1,11 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://brevicaudate-marquerite-realisingly.ngrok-free.dev";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
 
 export async function apiRequest(path: string, options: RequestInit = {}) {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
   const headers: any = {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json","ngrok-skip-browser-warning": "true",
     ...(options.headers || {}),
   };
 

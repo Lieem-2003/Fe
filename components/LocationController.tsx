@@ -13,7 +13,7 @@ export default function LocationController() {
 
         await fetch("https://brevicaudate-marquerite-realisingly.ngrok-free.dev/api/location/save", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json","ngrok-skip-browser-warning": "true" },
           body: JSON.stringify({ lat, lon }),
         });
 
