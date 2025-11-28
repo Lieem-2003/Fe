@@ -6,10 +6,10 @@ import MoreMenu from "./menus/MoreMenu";
 import LocationMenu from "./menus/LocationMenu";
 
 const navItems = [
-  { label: "Địa phương", dropdown: <LocationMenu /> },
+  { label: "Tour du lịch"},
   { label: "Khách sạn" },
   { label: "Vé máy bay" },
-  { label: "Chuyến đi", dropdown: <TripMenu /> },
+  { label: "Dịch vụ viễn thông", dropdown: <TripMenu /> },
   { label: "Điểm đến", dropdown: <LocationMenu /> },
   { label: "Xem thêm", dropdown: <MoreMenu /> },
 ];

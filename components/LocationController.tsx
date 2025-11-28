@@ -11,7 +11,7 @@ export default function LocationController() {
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
 
-        await fetch("https://brevicaudate-marquerite-realisingly.ngrok-free.dev/api/location/save", {
+        await fetch("https://sentrip-2.onrender.com/api/location/save", {
           method: "POST",
           headers: { "Content-Type": "application/json","ngrok-skip-browser-warning": "true" },
           body: JSON.stringify({ lat, lon }),

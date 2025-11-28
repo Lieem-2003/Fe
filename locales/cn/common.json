@@ -1,0 +1,32 @@
+{
+  "home": {
+    "welcome_title": "欢迎来到 SmartTravel",
+    "welcome_subtitle": "在越南预订航班、酒店、火车和租车，只需几秒钟。",
+    "welcome_desc": "获取实时航班更新、旅行资讯、独家优惠，并在应用中获得更多 Smart Coins！",
+    "start_button": "开始",
+
+    "create_title": "创建您的行程",
+    "create_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+
+    "start_date": "出发日期",
+    "end_date": "返回日期",
+    "people": "人数",
+    "create_button": "创建行程",
+
+    "top_destinations": "热门目的地",
+    "top_destinations_desc": "这是旅客最喜欢的地方",
+
+    "game_store": "游戏商店",
+    "travel_deals": "优惠旅行",
+    "sim_packages": "通信套餐",
+
+    "explore_title": "世界很大，去探索吧",
+    "explore_desc": "只需几次点击，您就能拥有完美的 SmartTravel 之旅。",
+
+    "explore_button": "探索",
+
+    "news_title": "旅游新闻",
+    "nearby_title": "附近热门体验",
+    "video_title": "视频"
+  }
+}

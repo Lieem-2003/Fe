@@ -1,0 +1,32 @@
+{
+  "home": {
+    "welcome_title": "Welcome to SmartTravel",
+    "welcome_subtitle": "Book flights, hotels, trains & rental cars anywhere in Vietnam in just seconds.",
+    "welcome_desc": "Get real-time flight updates, travel info, exclusive deals and 30% more Smart Coins only on the app!",
+    "start_button": "Start",
+
+    "create_title": "Create your itinerary",
+    "create_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+
+    "start_date": "Departure",
+    "end_date": "Return",
+    "people": "Travelers",
+    "create_button": "Create itinerary",
+
+    "top_destinations": "Top favorite destinations",
+    "top_destinations_desc": "These are the places travelers love the most",
+
+    "game_store": "Game Store",
+    "travel_deals": "Travel Deals",
+    "sim_packages": "Telecom packages",
+
+    "explore_title": "The world is wide, go explore",
+    "explore_desc": "You're just a few taps away from your perfect SmartTravel trip.",
+
+    "explore_button": "Explore",
+
+    "news_title": "Travel News",
+    "nearby_title": "Top experiences near you",
+    "video_title": "Videos"
+  }
+}

@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://sentrip-2.onrender.com";
 
 export async function apiRequest(path: string, options: RequestInit = {}) {
   const token =

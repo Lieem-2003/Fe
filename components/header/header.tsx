@@ -8,6 +8,7 @@ import MobileMenu from "./MobileMenu";
 import { Search, Bell, Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
 
+import LanguageSwitcher from "../LanguageSwitcher";
 import AuthModal from "../auth/AuthModal";
 import { LoginForm } from "../auth/login-form";
 import { SignupForm } from "../auth/signup-form";
@@ -46,11 +47,7 @@ export default function Header() {
             <span className="absolute top-0 right-0 w-[7px] h-[7px] bg-pink-500 rounded-full" />
           </div>
 
-          <div className="flex items-center gap-1 cursor-pointer text-sm">
-            <Globe size={18} />
-            <span>EN</span>
-            <span>▾</span>
-          </div>
+          <LanguageSwitcher />
 
           {/* Desktop user menu */}
           <div className="hidden md:block">

@@ -1,0 +1,32 @@
+{
+  "home": {
+    "welcome_title": "Chào mừng đến với SmartTravel",
+    "welcome_subtitle": "Đặt chuyến bay, khách sạn, tàu và xe thuê ở Việt Nam chỉ trong vài giây.",
+    "welcome_desc": "Nhận cập nhật chuyến bay theo thời gian thực, thông tin du lịch, ưu đãi độc quyền và 30% Smart Coins chỉ có trên ứng dụng!",
+    "start_button": "Bắt đầu",
+    
+    "create_title": "Tự tạo lịch trình",
+    "create_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+
+    "start_date": "Ngày đi",
+    "end_date": "Ngày về",
+    "people": "Số người",
+    "create_button": "Tạo lịch trình",
+
+    "top_destinations": "Top điểm đến yêu thích",
+    "top_destinations_desc": "Những địa điểm được yêu thích nhất bởi du khách",
+
+    "game_store": "Kho game",
+    "travel_deals": "Săn deal du lịch thả ga",
+    "sim_packages": "Gói cước viễn thông",
+
+    "explore_title": "Ngoài kia là một thế giới rộng lớn, hãy khám phá",
+    "explore_desc": "Bạn chỉ cách vài cú chạm là có một chuyến SmartTravel tuyệt vời.",
+
+    "explore_button": "Trải nghiệm",
+
+    "news_title": "Tin tức du lịch",
+    "nearby_title": "Top trải nghiệm gần bạn",
+    "video_title": "Video"
+  }
+}
