@@ -17,10 +17,10 @@ export default function LocationController() {
           body: JSON.stringify({ lat, lon }),
         });
 
-        console.log("Đã gửi vị trí:", lat, lon);
+        console.log(":", lat, lon);
       },
       (err) => console.error("Lỗi lấy vị trí:", err),
-      { enableHighAccuracy: false, maximumAge: 5000, timeout: 8000 }
+      { enableHighAccuracy: true }
     );
   };
 
