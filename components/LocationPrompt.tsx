@@ -19,8 +19,49 @@ export default function LocationPrompt({ onAllow }: LocationPromptProps) {
   // 👉 Luôn mở khi load trang (không cần check localStorage)
 
   const handleAllow = async () => {
-    await onAllow();
-    setOpen(false); // đóng khi user bấm cho phép
+    console.log("📍 BẮT ĐẦU lấy vị trí...");
+
+    if (!navigator.geolocation) {
+      console.log("❌ Trình duyệt không hỗ trợ geolocation");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        console.log("📍 VỊ TRÍ LẤY ĐƯỢC:", pos);
+
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+
+        try {
+          const res = await fetch("https://sentrip-2.onrender.com/api/location/save", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ lat, lon }),
+          });
+
+          console.log("📡 SERVER TRẢ VỀ:", await res.text());
+        } catch (error) {
+          console.log("❌ LỖI GỬI API:", error);
+        }
+
+        setOpen(false); // đóng form sau khi gửi xong
+      },
+
+      (err) => {
+        console.log("❌ LỖI LẤY VỊ TRÍ:", err);
+
+        if (err.code === 1) console.log("➡ User từ chối permission");
+        if (err.code === 2) console.log("➡ Không lấy được vị trí");
+        if (err.code === 3) console.log("➡ Hết thời gian (timeout)");
+      },
+
+      {
+        enableHighAccuracy: false,
+        timeout: 10000,
+        maximumAge: 5000,
+      }
+    );
   };
 
   const handleDeny = () => {
