@@ -15,38 +15,20 @@ interface LocationPromptProps {
 }
 
 export default function LocationPrompt({ onAllow }: LocationPromptProps) {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const asked = localStorage.getItem("location_prompt_shown");
-    if (asked === "yes") return;
-
-    if (navigator.permissions) {
-      navigator.permissions
-        .query({ name: "geolocation" as PermissionName })
-        .then((status) => {
-          if (status.state === "granted" || status.state === "denied") return;
-          setOpen(true);
-        });
-    } else {
-      setOpen(true);
-    }
-  }, []);
+  const [open, setOpen] = useState(true); 
+  // 👉 Luôn mở khi load trang (không cần check localStorage)
 
   const handleAllow = async () => {
-    localStorage.setItem("location_prompt_shown", "yes");
     await onAllow();
-    setOpen(false);
+    setOpen(false); // đóng khi user bấm cho phép
   };
 
   const handleDeny = () => {
-    localStorage.setItem("location_prompt_shown", "yes");
     setOpen(false);
   };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      {/* shadcn overlay */}
       <DialogOverlay className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" />
 
       <DialogContent className="max-w-sm rounded-xl p-6 z-[60]">
@@ -57,7 +39,7 @@ export default function LocationPrompt({ onAllow }: LocationPromptProps) {
         </DialogHeader>
 
         <p className="text-sm text-gray-600 mt-3">
-          SenTrip cần quyền truy cập vị trí để gợi ý điểm đến và hiển thị thời tiết theo khu vực của bạn.
+          SenTrip cần quyền truy cập vị trí để hiển thị thời tiết và gợi ý điểm đến gần bạn.
         </p>
 
         <div className="flex justify-end gap-2 mt-6">
