@@ -58,8 +58,6 @@ export default function LocationPrompt({ onAllow }: LocationPromptProps) {
 
       {
         enableHighAccuracy: false,
-        timeout: 10000,
-        maximumAge: 5000,
       }
     );
   };
