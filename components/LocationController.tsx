@@ -20,21 +20,16 @@ export default function LocationController() {
         console.log("Đã gửi vị trí:", lat, lon);
       },
       (err) => console.error("Lỗi lấy vị trí:", err),
-      { enableHighAccuracy: true }
+      { enableHighAccuracy: false, maximumAge: 5000, timeout: 8000 }
     );
   };
 
   useEffect(() => {
     if (!navigator.permissions) return;
 
-    navigator.permissions
-      .query({ name: "geolocation" as PermissionName })
-      .then((status) => {
-        if (status.state === "granted") {
-          // 👉 user đã cho phép từ trước → tự động lấy tọa độ
-          getAndSendLocation();
-        }
-      });
+    navigator.permissions.query({ name: "geolocation" }).then((status) => {
+      // ⚠️ Không gọi getAndSendLocation tự động trên mobile!
+    });
   }, []);
 
   return (
